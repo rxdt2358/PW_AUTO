@@ -1,0 +1,31 @@
+{
+    "name": "pw_auto",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "deploy-allure": "gh-pages -d allure-report"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "devDependencies": {
+        "@playwright/test": "^1.59.1",
+        "@types/archiver": "^7.0.0",
+        "@types/node": "^25.7.0",
+        "@types/nodemailer": "^8.0.0",
+        "allure-commandline": "^2.40.0",
+        "allure-playwright": "^3.8.0",
+        "gh-pages": "^6.3.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^6.0.3"
+    },
+    "dependencies": {
+        "@sendgrid/mail": "^8.1.6",
+        "archiver": "^5.3.2",
+        "cloudinary": "^2.10.0",
+        "nodemailer": "^8.0.7",
+        "xlsx": "^0.18.5"
+    }
+}
