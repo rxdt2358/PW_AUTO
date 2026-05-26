@@ -5,7 +5,8 @@
     "main": "index.js",
     "scripts": {
         "report": "allure generate allure-results --clean -o allure-report",
-        "deploy": "npx gh-pages -d allure-report"
+        "deploy": "npx gh-pages -d allure-report",
+        "send-report": "ts-node sendReport.ts"
     },
     "keywords": [],
     "author": "",
