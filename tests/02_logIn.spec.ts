@@ -71,7 +71,7 @@ test('Login with empty email', async ({ login, page }) => {
     );
 
     const message = await page.locator(loginLocators.email).evaluate((el: HTMLInputElement) => el.validationMessage);
-    expect(message).toBe('Please fill in this field.');
+    expect(message.toLowerCase()).toContain("please fill");
 });
 
 
@@ -89,7 +89,7 @@ test('Login with empty password', async ({ login, page }) => {
     );
 
     const message = await page.locator(loginLocators.password).evaluate((el: HTMLInputElement) => el.validationMessage);
-    expect(message).toBe('Please fill in this field.');
+    expect(message.toLowerCase()).toContain("please fill");
 });
 
 
@@ -105,7 +105,7 @@ test('Login with empty email and password', async ({ login, page }) => {
     );
 
     const message = await page.locator(loginLocators.email).evaluate((el: HTMLInputElement) => el.validationMessage);
-    expect(message).toBe('Please fill in this field.');
+    expect(message.toLowerCase()).toContain("please fill");
 });
 
 

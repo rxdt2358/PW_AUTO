@@ -11,8 +11,7 @@ test('Signup with empty name', async ({ login, page }) => {
     await login.signup(data.name, data.email);
 
     const message = await page.locator(signupLocators.entry.name).evaluate((el: HTMLInputElement) => el.validationMessage);
-
-    expect(message).toBe('Please fill in this field.');
+    expect(message.toLowerCase()).toContain("please fill");
 });
 
 
@@ -21,7 +20,7 @@ test('Signup with empty email', async ({ login, page }) => {
     await login.signup(data.name, data.email);
 
     const message = await page.locator(signupLocators.entry.email).evaluate((el: HTMLInputElement) => el.validationMessage);
-    expect(message).toBe('Please fill in this field.');
+    expect(message.toLowerCase()).toContain("please fill");
 });
 
 

@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 2
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 2
         },
         "id": "",
         "name": "",
@@ -61,11 +61,713 @@
     "tags": [],
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
-    "version": "1.59.1",
+    "version": "1.60.0",
     "workers": 2,
     "webServer": null
   },
   "suites": [
+    {
+      "title": "01_auth.setup.spec.ts",
+      "file": "01_auth.setup.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Login and save auth session",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5120,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:44:42.687Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d6f07bc6275664bc906c-25ee2f13bb9f4072b963",
+          "file": "01_auth.setup.spec.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "01_signUp.spec.ts",
+      "file": "01_signUp.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Signup with empty name",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 4614,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m\n    at C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\01_signUp.spec.ts:15:21",
+                    "location": {
+                      "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\01_signUp.spec.ts",
+                      "column": 21,
+                      "line": 15
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 13 |\u001b[39m     \u001b[36mconst\u001b[39m message \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(signupLocators\u001b[33m.\u001b[39mentry\u001b[33m.\u001b[39mname)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m \u001b[33mHTMLInputElement\u001b[39m) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidationMessage)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     expect(message)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Please fill in this field.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\01_signUp.spec.ts",
+                        "column": 21,
+                        "line": 15
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m\n\n\u001b[0m \u001b[90m 13 |\u001b[39m     \u001b[36mconst\u001b[39m message \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(signupLocators\u001b[33m.\u001b[39mentry\u001b[33m.\u001b[39mname)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m \u001b[33mHTMLInputElement\u001b[39m) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidationMessage)\u001b[33m;\u001b[39m\n \u001b[90m 14 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 15 |\u001b[39m     expect(message)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Please fill in this field.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 16 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\01_signUp.spec.ts:15:21\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:44:42.718Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\test-results\\01_signUp-Signup-with-empty-name\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\01_signUp.spec.ts",
+                    "column": 21,
+                    "line": 15
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc35ec793a2ff9a996c1-efc0df8579bb739a01d6",
+          "file": "01_signUp.spec.ts",
+          "line": 8,
+          "column": 5
+        },
+        {
+          "title": "Signup with empty email",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 1816,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m\n    at C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\01_signUp.spec.ts:24:21",
+                    "location": {
+                      "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\01_signUp.spec.ts",
+                      "column": 21,
+                      "line": 24
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mconst\u001b[39m message \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(signupLocators\u001b[33m.\u001b[39mentry\u001b[33m.\u001b[39memail)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m \u001b[33mHTMLInputElement\u001b[39m) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidationMessage)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     expect(message)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Please fill in this field.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\01_signUp.spec.ts",
+                        "column": 21,
+                        "line": 24
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m\n\n\u001b[0m \u001b[90m 22 |\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mconst\u001b[39m message \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(signupLocators\u001b[33m.\u001b[39mentry\u001b[33m.\u001b[39memail)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m \u001b[33mHTMLInputElement\u001b[39m) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidationMessage)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 24 |\u001b[39m     expect(message)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Please fill in this field.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 25 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 26 |\u001b[39m\n \u001b[90m 27 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\01_signUp.spec.ts:24:21\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:44:50.931Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\test-results\\01_signUp-Signup-with-empty-email\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\01_signUp.spec.ts",
+                    "column": 21,
+                    "line": 24
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "fc35ec793a2ff9a996c1-08423c6ba9ba64e09c98",
+          "file": "01_signUp.spec.ts",
+          "line": 19,
+          "column": 5
+        }
+      ],
+      "suites": [
+        {
+          "title": "Invalid email validations",
+          "file": "01_signUp.spec.ts",
+          "line": 28,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Invalid email test #1 - abc.com",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1754,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-26T10:44:53.938Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fc35ec793a2ff9a996c1-8e9842d190ec41a3a39a",
+              "file": "01_signUp.spec.ts",
+              "line": 31,
+              "column": 13
+            },
+            {
+              "title": "Invalid email test #2 - test@",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1097,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-26T10:44:55.846Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fc35ec793a2ff9a996c1-f6f8612dfd90bed96867",
+              "file": "01_signUp.spec.ts",
+              "line": 31,
+              "column": 13
+            }
+          ]
+        },
+        {
+          "title": "Signup with Excel Data",
+          "file": "01_signUp.spec.ts",
+          "line": 42,
+          "column": 6,
+          "specs": [
+            {
+              "title": "Signup Test #1",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 2789,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-05-26T10:44:56.961Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "fc35ec793a2ff9a996c1-2dfd6237942c918a1df1",
+              "file": "01_signUp.spec.ts",
+              "line": 46,
+              "column": 13
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "02_logIn.spec.ts",
+      "file": "02_logIn.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Invalid email and valid password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2660,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:44:50.537Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c6229ea5336b641e9320-57ac132b1eee100ef852",
+          "file": "02_logIn.spec.ts",
+          "line": 6,
+          "column": 5
+        },
+        {
+          "title": "Valid email and invalid password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2147,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:44:53.215Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c6229ea5336b641e9320-5c74040ed83fd2e12830",
+          "file": "02_logIn.spec.ts",
+          "line": 21,
+          "column": 5
+        },
+        {
+          "title": "Invalid email and invalid password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2050,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:44:55.377Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c6229ea5336b641e9320-f92002ad517c9bcc15dc",
+          "file": "02_logIn.spec.ts",
+          "line": 44,
+          "column": 5
+        },
+        {
+          "title": "Login with empty email",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1223,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m\n    at C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts:74:21",
+                    "location": {
+                      "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts",
+                      "column": 21,
+                      "line": 74
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 72 |\u001b[39m\n \u001b[90m 73 |\u001b[39m     \u001b[36mconst\u001b[39m message \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(loginLocators\u001b[33m.\u001b[39memail)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m \u001b[33mHTMLInputElement\u001b[39m) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidationMessage)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m     expect(message)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Please fill in this field.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts",
+                        "column": 21,
+                        "line": 74
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m\n\n\u001b[0m \u001b[90m 72 |\u001b[39m\n \u001b[90m 73 |\u001b[39m     \u001b[36mconst\u001b[39m message \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(loginLocators\u001b[33m.\u001b[39memail)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m \u001b[33mHTMLInputElement\u001b[39m) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidationMessage)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 74 |\u001b[39m     expect(message)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Please fill in this field.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 75 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 76 |\u001b[39m\n \u001b[90m 77 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts:74:21\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:44:57.447Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\test-results\\02_logIn-Login-with-empty-email\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts",
+                    "column": 21,
+                    "line": 74
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c6229ea5336b641e9320-14fda90fd48842157d9c",
+          "file": "02_logIn.spec.ts",
+          "line": 58,
+          "column": 5
+        },
+        {
+          "title": "Login with empty password",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1256,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m\n    at C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts:92:21",
+                    "location": {
+                      "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts",
+                      "column": 21,
+                      "line": 92
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 90 |\u001b[39m\n \u001b[90m 91 |\u001b[39m     \u001b[36mconst\u001b[39m message \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(loginLocators\u001b[33m.\u001b[39mpassword)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m \u001b[33mHTMLInputElement\u001b[39m) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidationMessage)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m     expect(message)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Please fill in this field.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 94 |\u001b[39m\n \u001b[90m 95 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts",
+                        "column": 21,
+                        "line": 92
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m\n\n\u001b[0m \u001b[90m 90 |\u001b[39m\n \u001b[90m 91 |\u001b[39m     \u001b[36mconst\u001b[39m message \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(loginLocators\u001b[33m.\u001b[39mpassword)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m \u001b[33mHTMLInputElement\u001b[39m) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidationMessage)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 92 |\u001b[39m     expect(message)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Please fill in this field.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 93 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 94 |\u001b[39m\n \u001b[90m 95 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts:92:21\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:44:59.807Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\test-results\\02_logIn-Login-with-empty-password\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts",
+                    "column": 21,
+                    "line": 92
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c6229ea5336b641e9320-368143cdab9eb37013ef",
+          "file": "02_logIn.spec.ts",
+          "line": 79,
+          "column": 5
+        },
+        {
+          "title": "Login with empty email and password",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 5,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 1287,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m\n    at C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts:108:21",
+                    "location": {
+                      "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts",
+                      "column": 21,
+                      "line": 108
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 106 |\u001b[39m\n \u001b[90m 107 |\u001b[39m     \u001b[36mconst\u001b[39m message \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(loginLocators\u001b[33m.\u001b[39memail)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m \u001b[33mHTMLInputElement\u001b[39m) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidationMessage)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 108 |\u001b[39m     expect(message)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Please fill in this field.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 109 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 110 |\u001b[39m\n \u001b[90m 111 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts",
+                        "column": 21,
+                        "line": 108
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m\"Please fill \u001b[7min\u001b[27m this field.\"\u001b[39m\nReceived: \u001b[31m\"Please fill \u001b[7mout\u001b[27m this field.\"\u001b[39m\n\n\u001b[0m \u001b[90m 106 |\u001b[39m\n \u001b[90m 107 |\u001b[39m     \u001b[36mconst\u001b[39m message \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(loginLocators\u001b[33m.\u001b[39memail)\u001b[33m.\u001b[39mevaluate((el\u001b[33m:\u001b[39m \u001b[33mHTMLInputElement\u001b[39m) \u001b[33m=>\u001b[39m el\u001b[33m.\u001b[39mvalidationMessage)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 108 |\u001b[39m     expect(message)\u001b[33m.\u001b[39mtoBe(\u001b[32m'Please fill in this field.'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 109 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 110 |\u001b[39m\n \u001b[90m 111 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts:108:21\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:45:02.287Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\test-results\\02_logIn-Login-with-empty-email-and-password\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\diya.pandya\\Desktop\\PW_Auto\\tests\\02_logIn.spec.ts",
+                    "column": 21,
+                    "line": 108
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "c6229ea5336b641e9320-30ee27c730c0edd063c1",
+          "file": "02_logIn.spec.ts",
+          "line": 97,
+          "column": 5
+        },
+        {
+          "title": "Password case sensitivity validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1584,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:45:04.913Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c6229ea5336b641e9320-d03eae8c746aeed5aed4",
+          "file": "02_logIn.spec.ts",
+          "line": 112,
+          "column": 5
+        },
+        {
+          "title": "Login with latest user credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2600,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:45:06.673Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c6229ea5336b641e9320-a91ff194847d7df757f2",
+          "file": "02_logIn.spec.ts",
+          "line": 127,
+          "column": 5
+        },
+        {
+          "title": "Login with perticular user",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2627,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T10:45:09.293Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c6229ea5336b641e9320-a0e7b6fcefd7f713f2a1",
+          "file": "02_logIn.spec.ts",
+          "line": 142,
+          "column": 5
+        }
+      ]
+    },
     {
       "title": "03_product.spec.ts",
       "file": "03_product.spec.ts",
@@ -85,15 +787,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 8749,
+                  "duration": 4382,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-21T11:21:23.873Z",
+                  "startTime": "2026-05-26T10:44:59.798Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -119,15 +821,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 6956,
+                  "duration": 4739,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-21T11:21:33.076Z",
+                  "startTime": "2026-05-26T10:45:04.197Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -153,15 +855,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 7193,
+                  "duration": 5059,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-21T11:21:40.151Z",
+                  "startTime": "2026-05-26T10:45:08.955Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -187,15 +889,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 12797,
+                  "duration": 7928,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-21T11:21:47.385Z",
+                  "startTime": "2026-05-26T10:45:14.034Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -221,10 +923,10 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 7226,
+                  "duration": 4043,
                   "errors": [],
                   "stdout": [
                     {
@@ -236,7 +938,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-21T11:22:00.224Z",
+                  "startTime": "2026-05-26T10:45:21.999Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -246,7 +948,7 @@
           ],
           "id": "a3b4f64f5805a62cf99f-febcae4e3b99e86e6cb9",
           "file": "03_product.spec.ts",
-          "line": 123,
+          "line": 121,
           "column": 5
         },
         {
@@ -262,15 +964,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
+                  "workerIndex": 3,
+                  "parallelIndex": 1,
                   "status": "passed",
-                  "duration": 18548,
+                  "duration": 10385,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-21T11:22:07.487Z",
+                  "startTime": "2026-05-26T10:45:26.063Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -280,7 +982,7 @@
           ],
           "id": "a3b4f64f5805a62cf99f-1e922f061efc5a8ffe30",
           "file": "03_product.spec.ts",
-          "line": 146,
+          "line": 144,
           "column": 5
         }
       ]
@@ -288,11 +990,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-21T11:21:22.349Z",
-    "duration": 67096.137,
-    "expected": 6,
+    "startTime": "2026-05-26T10:44:41.358Z",
+    "duration": 55238.547000000006,
+    "expected": 16,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 5,
     "flaky": 0
   }
 }
