@@ -33,7 +33,7 @@ async function run() {
         console.log("Deploying report...");
         execSync("npx gh-pages -d allure-report --dotfiles", { stdio: "inherit" });
         console.log("DEPLOY COMPLETED");
-        const reportUrl = "https://rxdt2358.github.io/playwright-allure-reports/";
+        const reportUrl = "https://rxdt2358.github.io/PW_AUTO/";
 
         await sendAllureReport(reportUrl);
         console.log("PROCESS COMPLETED");
