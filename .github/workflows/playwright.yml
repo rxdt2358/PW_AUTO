@@ -36,7 +36,7 @@ jobs:
           git config --global user.name "rxdt2358"
 
       - name: Deploy Allure report to GitHub Pages
-        run: npm run deploy
+        run: npx gh-pages -d allure-report -r https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/rxdt2358/playwright-allure-reports.git -u "github-actions-bot <github-actions[bot]@users.noreply.github.com>"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
