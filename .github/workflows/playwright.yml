@@ -6,24 +6,36 @@ on:
   pull_request:
 
 jobs:
-  test:
+  test-and-report:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: '18'
 
-      - run: npm ci
+      - name: Install dependencies
+        run: npm install
 
-      - run: npx playwright install chromium --with-deps
+      - name: Run tests
+        run: npm test
 
-      - run: npx playwright test
+      - name: Generate Allure report
+        run: npm run allure:generate
+        
+      - name: Deploy Allure report to GitHub Pages
+        run: npm run deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: test-results
-          path: playwright-report
+      - name: Send email with report
+        run: npm run send-report
+        env:
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
