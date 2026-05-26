@@ -30,6 +30,11 @@ jobs:
       - name: Generate Allure report
         run: npm run report   # make sure package.json has "report": "allure generate allure-results --clean -o allure-report"
 
+      - name: Setup Git identity
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
       - name: Deploy Allure report to GitHub Pages
         run: npm run deploy
         env:
