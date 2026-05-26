@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 2
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
     "projects": [
@@ -20,7 +20,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 2
+          "actualWorkers": 1
         },
         "id": "",
         "name": "",
@@ -67,563 +67,45 @@
   },
   "suites": [
     {
-      "title": "01_auth.setup.spec.ts",
-      "file": "01_auth.setup.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Login and save auth session",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 7361,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:15.654Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "d6f07bc6275664bc906c-25ee2f13bb9f4072b963",
-          "file": "01_auth.setup.spec.ts",
-          "line": 4,
-          "column": 5
-        }
-      ]
-    },
-    {
-      "title": "01_signUp.spec.ts",
-      "file": "01_signUp.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Signup with empty name",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 5608,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:15.719Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "fc35ec793a2ff9a996c1-efc0df8579bb739a01d6",
-          "file": "01_signUp.spec.ts",
-          "line": 8,
-          "column": 5
-        },
-        {
-          "title": "Signup with empty email",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
-                  "status": "passed",
-                  "duration": 1811,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:22.041Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "fc35ec793a2ff9a996c1-08423c6ba9ba64e09c98",
-          "file": "01_signUp.spec.ts",
-          "line": 18,
-          "column": 5
-        }
-      ],
-      "suites": [
-        {
-          "title": "Invalid email validations",
-          "file": "01_signUp.spec.ts",
-          "line": 27,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Invalid email test #1 - abc.com",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1749,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-26T12:54:23.876Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fc35ec793a2ff9a996c1-8e9842d190ec41a3a39a",
-              "file": "01_signUp.spec.ts",
-              "line": 30,
-              "column": 13
-            },
-            {
-              "title": "Invalid email test #2 - test@",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 1657,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-26T12:54:25.654Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fc35ec793a2ff9a996c1-f6f8612dfd90bed96867",
-              "file": "01_signUp.spec.ts",
-              "line": 30,
-              "column": 13
-            }
-          ]
-        },
-        {
-          "title": "Signup with Excel Data",
-          "file": "01_signUp.spec.ts",
-          "line": 41,
-          "column": 6,
-          "specs": [
-            {
-              "title": "Signup Test #1",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 1,
-                      "status": "passed",
-                      "duration": 3936,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-26T12:54:27.330Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "fc35ec793a2ff9a996c1-2dfd6237942c918a1df1",
-              "file": "01_signUp.spec.ts",
-              "line": 45,
-              "column": 13
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "02_logIn.spec.ts",
-      "file": "02_logIn.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [
-        {
-          "title": "Invalid email and valid password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2177,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:23.811Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c6229ea5336b641e9320-57ac132b1eee100ef852",
-          "file": "02_logIn.spec.ts",
-          "line": 6,
-          "column": 5
-        },
-        {
-          "title": "Valid email and invalid password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1459,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:26.007Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c6229ea5336b641e9320-5c74040ed83fd2e12830",
-          "file": "02_logIn.spec.ts",
-          "line": 21,
-          "column": 5
-        },
-        {
-          "title": "Invalid email and invalid password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2102,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:27.481Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c6229ea5336b641e9320-f92002ad517c9bcc15dc",
-          "file": "02_logIn.spec.ts",
-          "line": 44,
-          "column": 5
-        },
-        {
-          "title": "Login with empty email",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1223,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:29.603Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c6229ea5336b641e9320-14fda90fd48842157d9c",
-          "file": "02_logIn.spec.ts",
-          "line": 58,
-          "column": 5
-        },
-        {
-          "title": "Login with empty password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1685,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:30.845Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c6229ea5336b641e9320-368143cdab9eb37013ef",
-          "file": "02_logIn.spec.ts",
-          "line": 79,
-          "column": 5
-        },
-        {
-          "title": "Login with empty email and password",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1783,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:32.550Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c6229ea5336b641e9320-30ee27c730c0edd063c1",
-          "file": "02_logIn.spec.ts",
-          "line": 97,
-          "column": 5
-        },
-        {
-          "title": "Password case sensitivity validation",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 1949,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:34.349Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c6229ea5336b641e9320-d03eae8c746aeed5aed4",
-          "file": "02_logIn.spec.ts",
-          "line": 112,
-          "column": 5
-        },
-        {
-          "title": "Login with latest user credentials",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2801,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:36.318Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c6229ea5336b641e9320-a91ff194847d7df757f2",
-          "file": "02_logIn.spec.ts",
-          "line": 127,
-          "column": 5
-        },
-        {
-          "title": "Login with perticular user",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "",
-              "projectName": "",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 2703,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-26T12:54:39.134Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "c6229ea5336b641e9320-a0e7b6fcefd7f713f2a1",
-          "file": "02_logIn.spec.ts",
-          "line": 142,
-          "column": 5
-        }
-      ]
-    },
-    {
       "title": "03_product.spec.ts",
       "file": "03_product.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [
+        {
+          "title": "Verify All Products and product detail page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8516,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-26T13:23:58.385Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a3b4f64f5805a62cf99f-1bc96366254a2f9b7577",
+          "file": "03_product.spec.ts",
+          "line": 9,
+          "column": 5
+        },
         {
           "title": "Search Product",
           "ok": true,
@@ -637,15 +119,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 5361,
+                  "duration": 5038,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-26T12:54:31.294Z",
+                  "startTime": "2026-05-26T13:24:07.168Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -671,15 +153,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4035,
+                  "duration": 5220,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-26T12:54:36.672Z",
+                  "startTime": "2026-05-26T13:24:12.235Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -705,15 +187,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8182,
+                  "duration": 8473,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-26T12:54:40.723Z",
+                  "startTime": "2026-05-26T13:24:17.529Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -739,10 +221,10 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4388,
+                  "duration": 5024,
                   "errors": [],
                   "stdout": [
                     {
@@ -754,7 +236,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-26T12:54:48.923Z",
+                  "startTime": "2026-05-26T13:24:26.018Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -780,15 +262,15 @@
               "projectName": "",
               "results": [
                 {
-                  "workerIndex": 1,
-                  "parallelIndex": 1,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 10600,
+                  "duration": 11902,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-26T12:54:53.327Z",
+                  "startTime": "2026-05-26T13:24:31.064Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -806,9 +288,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-26T12:54:13.847Z",
-    "duration": 50215.96,
-    "expected": 20,
+    "startTime": "2026-05-26T13:23:57.415Z",
+    "duration": 45656.811,
+    "expected": 6,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

@@ -11,7 +11,8 @@ export class ProductPage {
     }
 
     async openFirstProduct() {
-        await this.page.click(productLocators.firstViewProduct);
+        await this.page.waitForSelector(productLocators.firstViewProduct, { timeout: 20000 });
+        await this.page.locator(productLocators.firstViewProduct).click({ force: true });
     }
 
     async searchProduct(product: string) {
