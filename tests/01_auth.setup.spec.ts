@@ -13,5 +13,6 @@ test('Login and save auth session', async ({ login, page }) => {
     );
 
     // Save auth session
+    console.log("Test");
     await page.context().storageState({ path: 'playwright/.auth/user.json' });
 });
