@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "test":  "npx playwright test",
         "report": "allure generate allure-results --clean -o allure-report",
         "deploy": "npx gh-pages -d allure-report",
         "send-report": "ts-node sendReport.ts"
