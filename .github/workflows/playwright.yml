@@ -19,14 +19,17 @@ jobs:
           node-version: '18'
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci   # cleaner than npm install
 
-      - name: Run tests
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
         run: npx playwright test
 
       - name: Generate Allure report
-        run: npm run allure:generate
-        
+        run: npm run report   # make sure package.json has "report": "allure generate allure-results --clean -o allure-report"
+
       - name: Deploy Allure report to GitHub Pages
         run: npm run deploy
         env:
