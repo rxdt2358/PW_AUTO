@@ -27,7 +27,12 @@ test('Verify All Products and product detail page', async ({ page }) => {
     const productPage = new ProductPage(page);
     await productPage.openProducts();
 
-    await expect(page.waitForURL('/products'));
+    await expect(page).toHaveURL('**/products', { timeout: 20000 });
+
+    const currentUrl = page.url();
+    console.log(currentUrl);
+
+
     await expect(page.locator(productLocators.productsList)).toBeVisible();
 
     await productPage.openFirstProduct();
