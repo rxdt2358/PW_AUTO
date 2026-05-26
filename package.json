@@ -6,7 +6,7 @@
     "scripts": {
         "test": "npx playwright test",
         "report": "allure generate allure-results --clean -o allure-report",
-        "deploy": "npx main -d allure-report",
+        "deploy": "gh-pages -d allure-report -r https://x-access-token:${GITHUB_TOKEN}@github.com/rxdt2358/playwright-allure-reports.git",
         "send-report": "ts-node sendReport.ts"
     },
     "keywords": [],
