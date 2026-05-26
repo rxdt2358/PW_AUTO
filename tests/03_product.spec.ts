@@ -26,7 +26,7 @@ test('Verify All Products and product detail page', async ({ page }) => {
 );
 
 
-test('Search Product', async ({ login, page }) => {
+test('Search Product', async ({ page }) => {
 
     const productPage = new ProductPage(page);
     await productPage.openProducts();
@@ -102,9 +102,7 @@ test('Add products to Cart and verify Cart', async ({ page }) => {
         const cartRow = page.locator(
             'tr',
             {
-                has: page.locator(
-                    `a:text-is("${product.name}")`
-                )
+                has: page.locator(`a:text-is("${product.name}")`)
             }
         );
 
@@ -125,7 +123,7 @@ test('Remove product from cart if exists', async ({ page }) => {
     await page.click(productLocators.cartBtn);
     await expect(page).toHaveURL(/view_cart/);
 
-    const productName = 'Stylish Dress';
+    const productName = 'Sleeveless Dress';
     const cartRow = page.locator('#cart_info_table tbody tr', { has: page.locator(`h4 a:text-is("${productName}")`) });
 
     const productExists = await cartRow.count();

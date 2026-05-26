@@ -1,0 +1,7 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","12797","Add products to Cart and verify Cart","","2026-05-21","passed","2026-05-21","","03_product.spec.ts","",""
+"","18548","Complete checkout and place order","","2026-05-21","passed","2026-05-21","","03_product.spec.ts","",""
+"","7226","Remove product from cart if exists","","2026-05-21","passed","2026-05-21","","03_product.spec.ts","",""
+"","7193","Verify Women category products page","","2026-05-21","passed","2026-05-21","","03_product.spec.ts","",""
+"","8749","Verify All Products and product detail page","","2026-05-21","passed","2026-05-21","","03_product.spec.ts","",""
+"","6956","Search Product","","2026-05-21","passed","2026-05-21","","03_product.spec.ts","",""

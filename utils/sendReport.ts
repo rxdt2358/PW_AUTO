@@ -123,10 +123,7 @@ export async function sendReport() {
 
         tls: {
             rejectUnauthorized: false
-        },
-
-        debug: true,
-        logger: true
+        }
     });
 
     await transporter.verify();
@@ -142,205 +139,162 @@ export async function sendReport() {
 
         subject: 'Playwright Automation Report',
         html: `
-        <div
-            style="
-                font-family: Arial, sans-serif;
-                padding: 20px;
-                background-color: #f4f6f8;
-            "
-        >
+        <div style="font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f4f6f8;">
 
             <div
-                style="
-                    background: white;
+                style="background: white;
                     padding: 25px;
                     border-radius: 10px;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                "
-            >
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
 
                 <h1
-                    style="
-                        color: #2c3e50;
-                        margin-bottom: 10px;
-                    "
-                >
+                    style="color: #2c3e50;
+                        margin-bottom: 10px;">
+
                     Playwright Automation Report
                 </h1>
 
                 <p>
                     Latest automation execution summary
                 </p>
-
                 <hr/>
+
+                <div style="margin:15px 0;">
+                    <span style="
+                        padding:8px 15px;
+                        border-radius:20px;
+                        color:white;
+                        background:${failed > 0 ? '#e74c3c' : '#2ecc71'};
+                        font-weight:bold;">
+                        ${failed > 0 ? "FAILED" : "PASSED"}
+                    </span>
+                </div>
 
                 <table
                     style="
                         width: 100%;
                         border-collapse: collapse;
-                        margin-top: 20px;
-                    "
-                >
+                        margin-top: 20px;">
                     <tr>
-                        <td
+                        <td width="200"
                             style="
                                 background: #3498db;
                                 color: white;
                                 padding: 15px;
                                 text-align: center;
-                                border-radius: 8px;
-                            "
-                        >
+                                border-radius:10px;
+                                display:inline-block;
+                                box-sizing:border-box;">
+
                             <h2>${total}</h2>
                             <p>Total</p>
                         </td>
 
                         <td width="10"></td>
-                        <td
-                            style="
-                                background: #2ecc71;
+                        <td width="200"
+                            style="background: #2ecc71;
                                 color: white;
                                 padding: 15px;
                                 text-align: center;
-                                border-radius: 8px;
-                            "
-                        >
+                                border-radius:10px;
+                                display:inline-block;
+                                box-sizing:border-box;">
                             <h2>${passed}</h2>
-                            <p>Passed</p>
+                            <p>Passed</p
                         </td>
 
                         <td width="10"></td>
-
-                        <td
-                            style="
-                                background: #e74c3c;
+                        <td width="200"
+                            style="background: #e74c3c;
                                 color: white;
                                 padding: 15px;
                                 text-align: center;
-                                border-radius: 8px;
-                            "
-                        >
+                                border-radius:10px;
+                                display:inline-block;
+                                box-sizing:border-box;">
                             <h2>${failed}</h2>
                             <p>Failed</p>
                         </td>
 
                         <td width="10"></td>
 
-                        <td
-                            style="
-                                background: #f39c12;
+                        <td width="200"
+                            style="background: #f39c12;
                                 color: white;
                                 padding: 15px;
                                 text-align: center;
-                                border-radius: 8px;
-                            "
-                        >
+                                border-radius:10px;
+                                display:inline-block;
+                                box-sizing:border-box;">
                             <h2>${skipped}</h2>
                             <p>Skipped</p>
                         </td>
-
                     </tr>
-
                 </table>
-
                 <br/>
 
                 <table
-                    style="
-                        width: 100%;
+                    style="width: 100%;
                         border-collapse: collapse;
-                        margin-top: 20px;
-                    "
-                >
+                        margin-top: 20px;">
 
                     <tr>
                         <td
-                            style="
-                                padding: 10px;
-                                border: 1px solid #ddd;
-                            "
-                        >
+                            style=" padding: 10px;
+                                border: 1px solid #ddd;">
                             <b>Execution Time</b>
                         </td>
 
                         <td
-                            style="
-                                padding: 10px;
-                                border: 1px solid #ddd;
-                            "
-                        >
+                            style="padding: 10px;
+                                border: 1px solid #ddd;">
                             ${new Date().toLocaleString()}
                         </td>
                     </tr>
 
                     <tr>
                         <td
-                            style="
-                                padding: 10px;
-                                border: 1px solid #ddd;
-                            "
-                        >
+                            style=" padding: 10px;
+                                border: 1px solid #ddd;">
                             <b>Environment</b>
                         </td>
 
                         <td
-                            style="
-                                padding: 10px;
-                                border: 1px solid #ddd;
-                            "
-                        >
+                            style=" padding: 10px;
+                                border: 1px solid #ddd;">
                             QA
                         </td>
                     </tr>
 
                     <tr>
                         <td
-                            style="
-                                padding: 10px;
-                                border: 1px solid #ddd;
-                            "
-                        >
+                            style=" padding: 10px;
+                                border: 1px solid #ddd;" >
                             <b>Status</b>
                         </td>
 
                         <td
-                            style="
-                                padding: 10px;
+                            style=" padding: 10px;
                                 border: 1px solid #ddd;
-                                color: ${failed > 0
-                ? 'red'
-                : 'green'
-            };
-                                font-weight: bold;
-                            "
-                        >
-                            ${failed > 0
-                ? 'FAILED'
-                : 'PASSED'
-            }
+                                color: ${failed > 0 ? 'red' : 'green'};
+                                font-weight: bold;">
+                            ${failed > 0 ? 'FAILED' : 'PASSED'}
                         </td>
                     </tr>
 
                     <tr>
                         <td
-                            style="
-                                padding: 10px;
-                                border: 1px solid #ddd;
-                            "
-                        >
+                            style=" padding: 10px;
+                                border: 1px solid #ddd;">
                             <b>Pass Percentage</b>
                         </td>
 
                         <td
-                            style="
-                                padding: 10px;
-                                border: 1px solid #ddd;
-                            "
-                        >
-                            ${(
-                (passed / total) *
-                100
-            ).toFixed(2)}%
+                            style=" padding: 10px;
+                                border: 1px solid #ddd;">
+                            ${((passed / total) * 100).toFixed(2)}%
                         </td>
                     </tr>
 
@@ -349,10 +303,7 @@ export async function sendReport() {
                 <br/>
 
                 <h3
-                    style="
-                        color: #e74c3c;
-                    "
-                >
+                    style="color: #e74c3c;">
                     Failed Tests
                 </h3>
 
@@ -364,26 +315,19 @@ export async function sendReport() {
 
                 <a
                     href="${reportUrl}"
-
                     target="_blank"
-                    style="
-                    color: #3498db;
+                    style="color: #3498db;
                     text-decoration: underline;
                     font-weight: bold;
-                    font-size: 16px;
-                "
-                >
+                    font-size: 16px;">
                     Download HTML Report
                 </a>
 
                 <br/><br/>
 
                 <p
-                    style="
-                        color: #7f8c8d;
-                        font-size: 12px;
-                    "
-                >
+                    style=" color: #7f8c8d;
+                        font-size: 12px;">
                     This is an automated email generated by Playwright Automation Framework.
                 </p>
 

@@ -67,62 +67,230 @@
   },
   "suites": [
     {
-      "title": "01_signUp.spec.ts",
-      "file": "01_signUp.spec.ts",
+      "title": "03_product.spec.ts",
+      "file": "03_product.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Signup with Excel Data",
-          "file": "01_signUp.spec.ts",
-          "line": 42,
-          "column": 6,
-          "specs": [
+          "title": "Verify All Products and product detail page",
+          "ok": true,
+          "tags": [],
+          "tests": [
             {
-              "title": "Signup Test #1",
-              "ok": true,
-              "tags": [],
-              "tests": [
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
                 {
-                  "timeout": 30000,
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8749,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-21T11:21:23.873Z",
                   "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "",
-                  "projectName": "",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 8129,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-05-13T14:59:40.354Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
+                  "attachments": []
                 }
               ],
-              "id": "fc35ec793a2ff9a996c1-2dfd6237942c918a1df1",
-              "file": "01_signUp.spec.ts",
-              "line": 46,
-              "column": 13
+              "status": "expected"
             }
-          ]
+          ],
+          "id": "a3b4f64f5805a62cf99f-1bc96366254a2f9b7577",
+          "file": "03_product.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "Search Product",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6956,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-21T11:21:33.076Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a3b4f64f5805a62cf99f-9f7d66fbaba3840b3f05",
+          "file": "03_product.spec.ts",
+          "line": 29,
+          "column": 5
+        },
+        {
+          "title": "Verify Women category products page",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7193,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-21T11:21:40.151Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a3b4f64f5805a62cf99f-5c18a84d210b62914ea7",
+          "file": "03_product.spec.ts",
+          "line": 41,
+          "column": 5
+        },
+        {
+          "title": "Add products to Cart and verify Cart",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12797,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-21T11:21:47.385Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a3b4f64f5805a62cf99f-ab0b8dbcf4d3fe4ac3ff",
+          "file": "03_product.spec.ts",
+          "line": 60,
+          "column": 5
+        },
+        {
+          "title": "Remove product from cart if exists",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7226,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "Sleeveless Dress exists in cart\n"
+                    },
+                    {
+                      "text": "Sleeveless Dress removed successfully\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-21T11:22:00.224Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a3b4f64f5805a62cf99f-febcae4e3b99e86e6cb9",
+          "file": "03_product.spec.ts",
+          "line": 123,
+          "column": 5
+        },
+        {
+          "title": "Complete checkout and place order",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18548,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-21T11:22:07.487Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a3b4f64f5805a62cf99f-1e922f061efc5a8ffe30",
+          "file": "03_product.spec.ts",
+          "line": 146,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-13T14:59:38.695Z",
-    "duration": 10601.335,
-    "expected": 1,
+    "startTime": "2026-05-21T11:21:22.349Z",
+    "duration": 67096.137,
+    "expected": 6,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

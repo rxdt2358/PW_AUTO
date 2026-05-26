@@ -9,16 +9,15 @@ async function run() {
 
     try {
 
-        console.log("Cleaning old allure-results...");
+        const reportPath = path.join(process.cwd(), "allure-report");
 
-        const resultsPath = path.join(process.cwd(), "allure-results");
+        execSync(
+            'cmd /c rmdir /s /q allure-report',
+            { stdio: 'ignore' }
+        );
 
-        if (fs.existsSync(resultsPath)) {
-            fs.rmSync(resultsPath, { recursive: true, force: true });
-            console.log("Old allure-results deleted");
-        }
+        console.log("Old allure-report deleted");
 
-        fs.mkdirSync(resultsPath, { recursive: true });
         console.log("Generating Allure report...");
 
         execSync(
@@ -27,17 +26,16 @@ async function run() {
         );
 
         console.log("REPORT GENERATED");
-
-        // STEP 2: Deploy report (GitHub Pages)
+        fs.writeFileSync(
+            path.join(reportPath, ".nojekyll"),
+            ""
+        );
         console.log("Deploying report...");
-        // execSync("npm run deploy-allure", { stdio: "inherit" });
+        execSync("npx gh-pages -d allure-report --dotfiles", { stdio: "inherit" });
         console.log("DEPLOY COMPLETED");
-
-        // STEP 3: Send Email
         const reportUrl = "https://rxdt2358.github.io/playwright-allure-reports/";
 
         await sendAllureReport(reportUrl);
-
         console.log("PROCESS COMPLETED");
 
     } catch (err) {

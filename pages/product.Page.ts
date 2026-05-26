@@ -15,18 +15,12 @@ export class ProductPage {
     }
 
     async searchProduct(product: string) {
-        await this.page.fill(
-            productLocators.searchInput,
-            product
-        );
+        await this.page.fill(productLocators.searchInput, product);
         await this.page.click(productLocators.searchBtn);
     }
 
     async addFirstProductToCart() {
-        await this.page
-            .locator(productLocators.addToCart)
-            .first()
-            .click();
+        await this.page.locator(productLocators.addToCart).first().click();
     }
 
     async fillCardDetails() {
