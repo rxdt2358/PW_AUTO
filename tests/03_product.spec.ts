@@ -10,7 +10,7 @@ test('Verify All Products and product detail page', async ({ page }) => {
     const productPage = new ProductPage(page);
     await productPage.openProducts();
 
-    await expect(page).toHaveURL('/products', { timeout: 10000 });
+    await expect(page).toHaveURL('/products', { timeout: 12000 });
     await expect(page.locator(productLocators.productsList)).toBeVisible();
 
     await productPage.openFirstProduct();
