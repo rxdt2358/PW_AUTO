@@ -7,23 +7,23 @@ test.use({ storageState: 'playwright/.auth/user.json' });
 test.beforeEach(async ({ page }) => { await page.goto('/'); });
 
 
-// test('Verify All Products and product detail page', async ({ page }) => {
-//     const productPage = new ProductPage(page);
-//     await productPage.openProducts();
+test('Verify All Products and product detail page', async ({ page }) => {
+    const productPage = new ProductPage(page);
+    await productPage.openProducts();
 
-//     await expect(page).toHaveURL('/products');
-//     await expect(page.locator(productLocators.productsList)).toBeVisible();
+    await expect(page).toHaveURL('/products');
+    await expect(page.locator(productLocators.productsList)).toBeVisible();
 
-//     await productPage.openFirstProduct();
-//     await expect(page).toHaveURL(/product_details/);
-//     await expect(page.locator(productLocators.productName)).toBeVisible();
-//     await expect(page.locator(productLocators.productCategory)).toBeVisible();
-//     await expect(page.locator(productLocators.productPrice)).toBeVisible();
-//     await expect(page.locator(productLocators.productAvailability)).toBeVisible();
-//     await expect(page.locator(productLocators.productCondition)).toBeVisible();
-//     await expect(page.locator(productLocators.productBrand)).toBeVisible();
-// }
-// );
+    await productPage.openFirstProduct();
+    await expect(page).toHaveURL(/product_details/);
+    await expect(page.locator(productLocators.productName)).toBeVisible();
+    await expect(page.locator(productLocators.productCategory)).toBeVisible();
+    await expect(page.locator(productLocators.productPrice)).toBeVisible();
+    await expect(page.locator(productLocators.productAvailability)).toBeVisible();
+    await expect(page.locator(productLocators.productCondition)).toBeVisible();
+    await expect(page.locator(productLocators.productBrand)).toBeVisible();
+}
+);
 
 
 test('Search Product', async ({ page }) => {
