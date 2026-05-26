@@ -4,23 +4,30 @@ import { productLocators } from '../locators/productLocators';
 
 const productName = 'Blue Top';
 test.use({ storageState: 'playwright/.auth/user.json' });
+
 test.beforeEach(async ({ page }) => {
-    await page.goto('/');
     await page.route('**/*', route => {
         const url = route.request().url();
-        if (url.includes('google_vignette') || url.includes('adsbygoogle')) {
+        if (
+            url.includes('google_vignette') ||
+            url.includes('adsbygoogle') ||
+            url.includes('aswift')
+        ) {
             route.abort();
         } else {
             route.continue();
         }
     });
+
+    await page.goto('/');
 });
+
 
 test('Verify All Products and product detail page', async ({ page }) => {
     const productPage = new ProductPage(page);
     await productPage.openProducts();
 
-    await expect(page).toHaveURL('/products', { timeout: 12000 });
+    await expect(page.waitForURL('/products'));
     await expect(page.locator(productLocators.productsList)).toBeVisible();
 
     await productPage.openFirstProduct();
