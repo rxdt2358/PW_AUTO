@@ -9,6 +9,7 @@
         "deploy": "gh-pages -d allure-report -r https://x-access-token:${GITHUB_TOKEN}@github.com/rxdt2358/PW_AUTO.git",
         "send-report": "ts-node sendLatestAllureReport.ts"
     },
+    
     "keywords": [],
     "author": "",
     "license": "ISC",
