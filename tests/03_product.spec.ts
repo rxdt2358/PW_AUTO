@@ -31,7 +31,6 @@ test('Verify All Products and product detail page', async ({ page }) => {
     // const currentUrl = page.url();
     // console.log(currentUrl);
 
-
     await expect(page.locator(productLocators.productsList)).toBeVisible();
 
     await productPage.openFirstProduct();
